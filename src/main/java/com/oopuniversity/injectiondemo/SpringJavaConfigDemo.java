@@ -10,7 +10,12 @@ public class SpringJavaConfigDemo {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.scan("com.oopuniversity.injectiondemo.resources");
-        ctx.refresh();
+//        try {
+            ctx.refresh();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//            System.exit(1);
+//        }
 
         System.out.println("I believe this is the most concise possible automatically configured and injected Spring program possible as of June 5, 2016");
         System.out.println("No configuration XML files, no configuration Java files, nothing but a properly written main application and a couple of");
